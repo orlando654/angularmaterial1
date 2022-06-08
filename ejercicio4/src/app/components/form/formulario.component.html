@@ -1,0 +1,35 @@
+<div class="containerPro">
+  <form [formGroup]="form" (ngSubmit)="guardar()">
+    <div>
+      <button mat-raised-button type="button" class="adicionar" (click)="agregarCampo()">Adicionar</button>
+    </div>
+
+    <div class="textArea" >
+      <div formArrayName="caja" *ngFor="let s of campoContenido.controls; let i = index ">
+        <mat-form-field appearance="fill" class="input">
+          <mat-label>Nombres......</mat-label>
+          <input matInput #message maxlength="300" [formControlName]="i" required >
+        </mat-form-field>
+      </div>
+      
+      <mat-form-field appearance="fill" class="textarea">
+        <textarea matInput cols="30" rows="7" > {{ campoTextos }} </textarea>
+      </mat-form-field>  
+
+    </div>
+
+    <div class="container-2">
+      <div>
+        <button mat-raised-button type="reset" class="limpiar">Limpiar Nombre</button>
+        <button mat-raised-button color="warn" (click)="borrar(this.campoContenido.value.i)" type="button" class="eliminar">Eliminar</button>
+        <br>
+        <button mat-raised-button type="button" (click)="limpiarCaja()"  class="limpiar-2">Limpiar Caja</button>
+      </div>
+
+      <div>
+        <button mat-raised-button (click)="guardar()" class="guardar" [disabled]="form.invalid">Guardar</button>
+        <button mat-raised-button type="reset" (click)="limpiar()" class="limpiar-1">Limpiar Todo</button>
+      </div>
+    </div>
+  </form>
+</div>

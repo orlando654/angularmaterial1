@@ -1,0 +1,19 @@
+[
+  {
+  "name": "nivel 1",
+  "children": [
+    {
+      "name": "nivel 1.1",
+      "children": [{"name": "nivel 1.1.1"}]
+    },
+    {
+      "name": "nivel 1.2",
+      "children": [{"name": "nivel 1.2.1"}]
+    },
+    {
+      "name": "nivel 1.3",
+      "children": [{"name": "nivel 1.3.1"}]
+    }
+  ]
+  }
+]

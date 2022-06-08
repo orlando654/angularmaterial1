@@ -1,0 +1,57 @@
+<form [formGroup]="form">
+ 
+    <mat-form-field appearance="fill">
+      <mat-label>Input</mat-label>
+      <input 
+        matInput
+        formControlName="nombre"
+      >
+    </mat-form-field> <br>
+
+    <div formArrayName="checkBoxes">
+      <p *ngFor="let checkName of checkBoxesNames.controls; let id = index"
+      [formGroupName]="id">
+        <mat-checkbox 
+          class="example-margin"
+          formControlName="check"
+        >
+        {{ checkName.get('nombreCheck')?.value }}
+      </mat-checkbox>
+
+        <button class = "elim"
+          mat-raised-button
+          color="warn"
+          (click)="deleteNameCheck(id)"
+        >Eliminar</button>
+
+      </p>
+      
+      <button class="adi"
+        mat-raised-button
+        color="raised"
+        (click)="addNameCheck()"
+      >Adicionar</button>
+    </div>
+    
+    <button 
+      mat-raised-button
+      class="guardar"
+      color="primary"
+      (click)="addNamesTextArea()"
+      [disabled]="form.invalid"
+    >Guardar</button>
+
+    <mat-error *ngIf="mensaje">No hay checkbox tiqueados</mat-error>
+  
+    <br>
+    <br><br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Lista de Nombres</mat-label>
+
+      <textarea matInput placeholder="Aqui se muestran los nombres">{{mostrarListaNombre}}</textarea>
+
+    </mat-form-field>
+    <br>
+    <button class =" limpi" mat-stroked-button color="primary" (click)="clearNames()">Limpiar</button>
+
+</form>

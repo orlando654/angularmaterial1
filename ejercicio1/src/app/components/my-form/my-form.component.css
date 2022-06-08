@@ -1,0 +1,74 @@
+.container {
+  padding: 15px;
+  width: 440px;
+  margin: 0px auto;
+  float: left;
+  
+}
+
+.btn-agregar {
+  margin-left: 30px;
+  vertical-align: top;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #4733b8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  
+
+}
+
+.input-num {
+  vertical-align: middle;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+}
+
+.grupo {
+  height: 300px;
+  width: 400px;
+	overflow-y: scroll;
+  
+}
+
+.mat-tree-node {
+  margin-left: 12px;
+}
+
+.nested-node {
+  padding-left: 40px;
+}
+
+.example-tree .nested-node > .mat-tree-node {
+  padding-left: 40px;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style-type: none;
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.espace {
+  margin-left: 12px;
+}

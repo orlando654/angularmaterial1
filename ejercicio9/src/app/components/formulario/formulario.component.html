@@ -1,0 +1,30 @@
+
+<div class="container">
+    <form [formGroup]="form" class="formboton">
+        <div class="fila1">
+            <button class="botton_adicion mas" mat-button (click)="adicionar()">+</button>
+            <button class="btneliminar eliminar" mat-button (click)="eliminar_todo()">Eliminar Todo</button>
+        </div>
+        <br>
+        <hr>
+        <div class="contenedor" formArrayName="utiles">
+            <div class="contenido1" *ngFor="let s of getUtiles.controls; let i = index " [formGroupName]="i">
+                <mat-form-field class="input" appearance="legacy">
+                    <mat-label>Utiles Escolares</mat-label>
+                    <input matInput placeholder="utiles.Escolares" formControlName="utilNuevo" autocomplete="off">
+                    <small *ngIf="s.invalid">Solo se admiten letras</small>
+                </mat-form-field>
+                <mat-checkbox class="example-margin  " formControlName="check">Aceptar</mat-checkbox>
+                <button class="boton_eliminar" mat-button (click)="eliminar(i)">Eliminar</button>           
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="fila3">
+            <button class="botton_guardar" mat-button (click)="guardar()" [disabled]="invalido">Guardar</button>
+            <button class="botton_limpiar" mat-button (click)="limpiar()">Limpiar</button>
+        </div>
+    </form>
+
+   
+</div>

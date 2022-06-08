@@ -1,0 +1,26 @@
+.main-container{
+   
+
+.subfield{
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ffff;
+}
+.gamefield{
+    max-width: 300px;
+    
+}
+.gameboard{
+      display:flex ;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 30px;
+}
+
+.player-one{
+    p{
+        color: rgb(83, 163 ,83)
+    }
+    }
+}

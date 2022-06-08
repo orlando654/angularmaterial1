@@ -1,0 +1,64 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo mb-3">{{ titulo | uppercase }}</h5>
+        <form class="example-form" [formGroup]="form" (ngSubmit)="guardarTarjeta()">
+            <div class="input-group input-group-lg mb-3">  
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label><i class="fa-solid fa-user" class="fas fa-user-circle"
+                                [class.green-icon]="this.form.get('titular')?.valid"
+                                [class.red-icon]="this.form.get('titular')?.invalid && this.form.get('titular')?.touched"></i>
+                            Titular</mat-label>
+                        <input matInput placeholder="Titular " type="text" formControlName="titular"
+                            class="form-control">
+                    </mat-form-field>
+
+            </div>
+            <div class="input-group input-group-lg mb-3">
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label><i class="fas fa-credit-card"
+                                [class.green-icon]="this.form.get('numeroTarjeta')?.valid"
+                                [class.red-icon]="this.form.get('numeroTarjeta')?.invalid && this.form.get('numeroTarjeta')?.touched"></i>Numero
+                            De Tarjeta</mat-label>
+                        <input matInput placeholder="Titular" type="text" formControlName="numeroTarjeta"
+                            class="form-control" maxlength="13" placeholder="Numero Tarjeta" style="text-transform: uppercase ;">
+                    </mat-form-field>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group input-group-lg mb-3">
+
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label> <i class="fas fa-calendar-alt"
+                                        [class.green-icon]="this.form.get('fechaExpiracion')?.valid"
+                                        [class.red-icon]="this.form.get('fechaExpiracion')?.invalid && this.form.get('fechaExpiracion')?.touched"></i>Date
+                                </mat-label>
+                                <input matInput placeholder="Titular " type="text" formControlName="fechaExpiracion"
+                                    maxlength="5" class="form-control" placeholder="MM/YY">
+                            </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="input-group input-group-lg mb-3">
+
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label> <i class="fas fa-key" [class.green-icon]="this.form.get('cvv')?.valid"
+                                        [class.red-icon]="this.form.get('cvv')?.invalid && this.form.get('cvv')?.touched"></i>Contraseña
+                                </mat-label>
+                                <input matInput placeholder="Titular " type="password" formControlName="cvv"
+                                    maxlength="3" class="form-control" placeholder="CVV">
+                            </mat-form-field>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button [disabled]="form.invalid" type="submit" class="btn btn-success btn-lg btn" mat-raised-button
+                    color="primary"> <i class="fa-solid fa-coins"></i> &nbsp; {{boton}}</button>
+            </div>
+        </form>
+    </div>
+</div>

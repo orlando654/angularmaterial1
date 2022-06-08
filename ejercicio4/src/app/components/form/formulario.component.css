@@ -1,0 +1,61 @@
+* {
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+.containerPro {
+    text-align: center;
+}
+
+.textarea {
+    position: relative;
+}
+
+.adicionar {
+    margin-top: 30px;
+    margin-left: 5%;
+    float: left;
+}
+
+.input {
+    margin-top: 30px;
+    float: left;
+}
+
+
+.limpiar {
+    float: left;
+    margin-top: -25rem;
+    margin-left: 110%;
+}
+
+.limpiar-2 {
+    float: left;
+    margin-top: -10.1rem;
+    margin-left: 110%;
+}
+
+
+.eliminar {
+    float: left;
+    margin-top: -15rem;
+    margin-left: 170%;
+    background-color: goldenrod;
+    color: white;
+}
+
+.guardar {
+    float: left;
+    margin-top: -17rem;
+    margin-left: 230%;
+}
+
+.limpiar-1 {
+    float: left;
+    margin-top: -13rem;
+    margin-left: 231%;
+}
+
+.textarea {
+    margin-left: 32%;
+}
